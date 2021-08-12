@@ -26,3 +26,9 @@ Important classes include:
 
 4. Code the solution.
 
+-----------
+
+5. If this were in a professional setting, I would then carry out more extensive testing, including other airbnb property links. For now I only tested to make sure it works for those three links on my computer.
+Optimization is also something I could work on at this stage. For example, it's fairly slow at the moment, is there a way to make it quicker? (I'm very new to webpage scraping so I'm not sure).
+Also it would be a good idea to better comment the code and maybe write documentation for it.
+And I would of course need to check that my output is formatted as needed. I print out a dictionary in the Python console for now, but maybe to a CSV or something would be better...?
