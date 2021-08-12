@@ -1,0 +1,28 @@
+How to handle the problem:
+--------------------------
+
+1. Examine the problem. I need to gather the following information from the pages using web scraping:
+	- property name
+	- property type
+	- bedroom number
+	- bathroom number
+	- amenities list
+
+The first link does not go to a valid page (this must be handled in the code, i.e. give an error like "property not available" or similar).
+
+2. Research how to do web scraping (specifically in Python) as I have not done so before.
+
+After doing the research, I found the requests library can be used to get the html for the webpage and BeautifulSoup can be used to parse that html. However, after trying this I realised requests only works when the page doesn't use javascript, so instead I'll use Selenium.
+
+3. Examine the webpages. Where can the information I'm looking for be found? Using the page inspection tool on the browser is especially helpful to see the html structure.
+
+The page structure is not like I've seen before with A LOT of divs within divs within divs... And they have seem to have random class names, but they are consistent across pages.
+
+Important classes include:
+	- h1 "_fecoyn4" : property name
+	- div "_tqmy57" : bedrooms, bathrooms (each in own <span>)
+	- div "_1qsawv5" : property type, e.g. "Entire home"
+	- div "_gw4xx4" : each amenity
+
+4. Code the solution.
+
